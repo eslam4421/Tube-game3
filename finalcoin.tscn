@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwie24c0hu3cg"]
+
+[ext_resource type="Script" uid="uid://c3vne21os7lsj" path="res://finalcoin.gd" id="1_r4jss"]
+[ext_resource type="Texture2D" uid="uid://clutln2xn805p" path="res://2b8e4ae3-4958-4936-8b0f-63a62a3f9d0e.jpeg" id="2_yrnfw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i88tp"]
+size = Vector2(497, 430)
+
+[node name="finalcoin" type="Area2D" groups=["playe", "player"]]
+script = ExtResource("1_r4jss")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_yrnfw")
+region_enabled = true
+region_rect = Rect2(16, 96, 496, 432)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_i88tp")
